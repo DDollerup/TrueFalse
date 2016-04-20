@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="/Home/TrueFalseSubmit" method="post">
+
+    <input type="radio" name="test" value="true" />
+    <input type="radio" name="test" value="false" />
+
+    <input type="submit" value="Save" />
+
+</form>
+
+@if (TempData["Test"] != null)
+{
+    @TempData["Test"]
+}
